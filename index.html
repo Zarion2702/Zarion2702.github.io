@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+  <head>
+    <meta charset="UTF-8">
+    <title> Formatação CSS </title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            background-color: black; 
+            color: rgb(0, 0, 0); 
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: rgb(0, 5, 0); 
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+:root{
+    --fonte-titulo:"Open Sans";
+    --fonte-texto:"Open Sans", "sans-serif";
+    --cor-titulo:rgb(255, 255, 255);
+    --fundo-titulo:rgb(25, 90, 220);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color: rgb(25, 90, 220);
+    color:white;
+}
+.cabecalho{
+    padding: 1.5% 0% 1.5% 10%;
+    background-image: linear-gradient(var(--fundo-titulo),black);
+    border: solid;
+    border-color: rgb(1, 18, 18);
+}
+.cabecalho__menu {
+    display:flex;
+    gap: 50px;
+}
+.cabecalho_menu_link{
+    font-family: var(--fonte-titulo);
+    font-size: 2.0rem;
+    font-weight: 500;
+    color: var(--cor-titulo);
+    text-decoration: none;
+}
+.apresentacao {
+    padding: 0% 0% 0% 10%;
+    display:flex;
+    align-items: center;
+    gap: 50px;
+}
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao_conteudo_titulo {
+    padding: 2% 0% 0% 10%;
+    font-size: 2.25rem;
+    text-align:center;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-titulo);
+    font-weight: 500;
+}
+.apresentacao_conteudo_texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-texto);
+
+    text-align:justify;
+}
+.apresentacao__imagem{
+    padding: 5% 0% 0% 0%;
+    width: 40%;
+}
+.rodape {
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-titulo);
+    background-image: linear-gradient(rgb(246, 244, 244),var(--fundo-titulo));
+    text-align: center;   
+}
+@media (max-width:1200px){
+    .cabecalho{
+       padding: 1%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .cabecalho_menu_link{
+        font-family: var(--fonte-titulo);
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao_conteudo_titulo {
+        padding: 0% 0% 0% 0%;
+        font-size: 1.8rem;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    .apresentacao_conteudo_texto {
+        font-size: 1.2rem;
+    }
+    .apresentacao__imagem{
+        padding: 1% 0% 0% 0%;
+        width: 50%;
+    }
+    .rodape {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+}
+    </style>
+</head>
+<body>
+  <header  class="cabecalho">
+    <nav  class="cabecalho__menu">
+      <a class="cabecalho_menu_link" href ="index.html"> Início </a>
+      <a class="cabecalho_menu_link" href ="sobre.html"> Sobre </a>
+      <a class="cabecalho_menu_link" href ="contato.html"> Contato </a>
+</nav>
+</header>
+<main class="apresentacao" >
+  <section class="apresentacao_conteudo">
+    <h1 class="apresentacao_conteudo_titulo"> Segurança Digital  </h1>
+    <br>
+    <p style="text-align: left; text-align: justify">A segurança digital desempenha um papel crucial em nossa vida cotidiana, considerando a crescente interconectividade proporcionada pela internet. Nesse contexto, é vital adotar medidas proativas para resguardar nossos dados pessoais e informações sensíveis.
+
+        Uma prática fundamental é a criação e utilização de senhas robustas, combinando caracteres alfanuméricos e símbolos. Além disso, manter seu software e antivírus sempre atualizados é uma linha de defesa eficaz contra ameaças cibernéticas em constante evolução.
+        
+        A prudência ao lidar com e-mails e links é essencial; evite clicar em mensagens suspeitas ou de remetentes desconhecidos, pois isso pode prevenir possíveis ataques de phishing. Esteja sempre atento às atualizações de segurança e revise suas configurações de privacidade regularmente.
+        
+        O conhecimento sobre ameaças digitais, como malware e ransomware, é crucial. Esteja ciente das práticas recomendadas para evitar infecções e mantenha backups regulares de seus dados importantes.
+        
+        Em resumo, ao adotar uma abordagem proativa para a segurança digital, podemos desfrutar dos benefícios da tecnologia de forma mais segura e confiável. Se precisar de mais orientações ou informações específicas, estou à disposição!
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        </p>
+  </section>
+  <img src="img/evolucao.png" alt="Descrição da Imagem">
+</main>
+  <footer class="rodape">
+    <p> Site de exemplo para a disciplina Oficina Multidisciplinar.
+                             SEGURANÇA DIGITAL
+    </p>
+  </footer>
+</body>
+</html>
